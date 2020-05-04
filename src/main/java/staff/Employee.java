@@ -16,6 +16,11 @@ public abstract class Employee {
         return name;
     }
 
+    public void setName(String name) {
+        if (!name.equals(""))
+            this.name = name;
+    }
+
     public String getNationalInsuranceNumber() {
         return nationalInsuranceNumber;
     }
@@ -25,6 +30,7 @@ public abstract class Employee {
     }
 
     public void raiseSalary(double increment) {
+        if (increment > 0)
         salary += increment;
     }
 
